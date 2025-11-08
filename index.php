@@ -161,6 +161,45 @@
       pointer-events: none;
       transform: translateZ(0);
     }
+
+    /* Botón flotante de WhatsApp */
+    .btn-whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: white;
+      font-size: 1.9rem;
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
+      z-index: 1050;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-whatsapp:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px rgba(37, 211, 102, 0.9);
+    }
+
+    .btn-whatsapp i {
+      animation: pulse 2s infinite;
+    }
+
+    /* Brillo animado */
+    @keyframes pulse {
+
+      0%,
+      100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px #25d366;
+      }
+
+      50% {
+        text-shadow: 0 0 15px #25d366, 0 0 30px #25d366;
+      }
+    }
   </style>
 </head>
 
@@ -427,6 +466,41 @@
     </div>
   </footer>
 
+
+
+
+  <!-- Botón flotante de WhatsApp -->
+  <button type="button" class="btn-whatsapp" data-bs-toggle="modal" data-bs-target="#whatsappModal">
+    <i class="bi bi-whatsapp"></i>
+  </button>
+
+  <!-- Modal WhatsApp -->
+  <div class="modal fade" id="whatsappModal" tabindex="-1" aria-labelledby="whatsappModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-light border-warning" style="border-radius: 14px;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-bold text-warning" id="whatsappModalLabel">
+            <i class="bi bi-chat-dots me-2"></i>Habla con un socio
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p class="mb-3">
+            🚀 <strong>¿Quieres más información?</strong><br>
+            Habla directamente con un <span class="text-warning fw-bold">socio de Forte Aesthetic</span> y resuelve tus dudas al instante.
+          </p>
+          <a href="https://wa.me/5215555555555" target="_blank" class="btn btn-success btn-lg px-4 rounded-pill">
+            <i class="bi bi-whatsapp me-2"></i> Ir a WhatsApp
+          </a>
+        </div>
+        <div class="modal-footer border-0 justify-content-center">
+          <small class="text-muted">Atención personalizada todos los días 🕐</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!-- Bootstrap JS bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Anime.js -->
@@ -554,7 +628,11 @@
         this.reset();
       }, 2400);
     });
+
+    
   </script>
+
+
 </body>
 
 </html>
