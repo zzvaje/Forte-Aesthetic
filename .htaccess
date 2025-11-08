@@ -1,0 +1,31 @@
+# Habilitar la reescritura de URLs
+RewriteEngine On
+
+# Eliminar la extension .php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Eliminar la extension .html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Bloquear el acceso a la carpeta config y sus archivos
+<IfModule mod_rewrite.c>
+    RewriteRule ^config/ - [F,L]
+</IfModule>
+
+# Configurar pagina personalizada para errores
+ErrorDocument 401 /Data_Analitica/pages/401
+ErrorDocument 403 /Data_Analitica/pages/403
+ErrorDocument 404 /Data_Analitica/pages/404
+ErrorDocument 500 /Data_Analitica/pages/500
+ErrorDocument 502 /Data_Analitica/pages/502
+ErrorDocument 503 /Data_Analitica/pages/503
+
+# MODO MANTENIMIENTO - ACTIVAR DESCOMENTANDO
+# RewriteEngine On
+# RewriteCond %{REQUEST_URI} !^/Data_Analitica/pages/mantenimiento\.php$ [NC]
+# RewriteRule ^(.*)$ /Data_Analitica/pages/mantenimiento.php [R=302,L]
+# Header set Retry-After "3600"

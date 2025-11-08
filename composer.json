@@ -1,0 +1,21 @@
+{
+    "name": "tlk/doctorparedes_tlk",
+    "description": "Proyecto de doctorparedes_tlk de Grupo TLK realizado en 2025",
+    "require": {
+        "twbs/bootstrap": "^5.3",
+        "phpoffice/phpspreadsheet": "^4.5"
+    },
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Edwin\\Apodaca\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Grupo TLK",
+            "email": "edwin.calderon@tlk.com.mx"
+        }
+    ],
+    "minimum-stability": "stable"
+}
