@@ -422,31 +422,37 @@
 
       <div class="divider"></div>
 
-      <!-- Contact / Subscribe -->
+      <!-- Contacto WhatsApp -->
       <section id="contact" class="mb-5">
         <div class="row align-items-center">
           <div class="col-lg-6">
-            <h5 class="small muted">Contacto</h5>
-            <h2 class="fw-bold">¿Tienes alguna pregunta?</h2>
-            <p class="muted">Déjanos tu correo y te contactamos con una oferta especial.</p>
+            <h5 class="small muted">Contacto directo</h5>
+            <h2 class="fw-bold">¿Quieres saber más?</h2>
+            <p class="muted">
+              💬 <strong>Escríbenos por WhatsApp</strong> para resolver tus dudas, conocer nuestros planes o recibir una atención personalizada.
+            </p>
 
-            <form class="row g-2 subscribe" id="subscribeForm">
-              <div class="col-12">
-                <label class="form-label small">Correo</label>
-                <input class="form-control form-control-lg bg-transparent text-white border-1" type="email" placeholder="tucorreo@ejemplo.com" required>
+            <div class="whatsapp-box p-4 mt-4">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <i class="bi bi-whatsapp text-success" style="font-size:2.3rem;"></i>
+                <div>
+                  <h5 class="fw-bold mb-0 text-light">Chat en vivo</h5>
+                  <small class="text-white">Respuestas rápidas de nuestro equipo</small>
+                </div>
               </div>
-              <div class="col-12 d-flex gap-2">
-                <button type="submit" class="btn btn-primary-custom flex-grow-1">Enviar</button>
-                <button type="button" class="btn btn-outline-light">Llámanos</button>
-              </div>
-            </form>
+              <a href="https://wa.me/5215555555555" target="_blank"
+                class="btn btn-success btn-lg w-100 fw-bold rounded-pill shadow">
+                <i class="bi bi-whatsapp me-2"></i> Enviar mensaje por WhatsApp
+              </a>
+            </div>
           </div>
 
-          <div class="col-lg-5 text-center">
+          <div class="col-lg-5 text-center mt-4 mt-lg-0">
             <img src="assets/img/forte_trainer.png" class="img-fluid rounded program-card" alt="trainer">
           </div>
         </div>
       </section>
+
 
     </div>
   </main>
@@ -494,7 +500,7 @@
           </a>
         </div>
         <div class="modal-footer border-0 justify-content-center">
-          <small class="text-muted">Atención personalizada todos los días 🕐</small>
+          <small class="text-white">Atención personalizada todos los días 🕐</small>
         </div>
       </div>
     </div>
@@ -628,8 +634,6 @@
         this.reset();
       }, 2400);
     });
-
-    
   </script>
 
 
